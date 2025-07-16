@@ -125,8 +125,7 @@ services:
       test: [ "CMD", "bash", "-c", 'nc -z localhost 9093' ]
       interval: 10s
       timeout: 5s
-      retries: 5
-    
+      retries: 5 
 
   schema-registry:
     image: confluentinc/cp-schema-registry:7.4.0
@@ -167,10 +166,10 @@ services:
     environment:
       CONTROL_CENTER_BOOTSTRAP_SERVERS: 'broker1:29092,broker2:29093,broker3:29094'
       CONTROL_CENTER_SCHEMA_REGISTRY_URL: "http://schema-registry:8081"
-      CONTROL_CENTER_REPLICATION_FACTOR: 2
-      CONTROL_CENTER_INTERNAL_TOPICS_PARTITIONS: 2
-      CONTROL_CENTER_MONITORING_INTERCEPTOR_TOPIC_PARTITIONS: 2
-      CONFLUENT_METRICS_TOPIC_REPLICATION: 2
+      CONTROL_CENTER_REPLICATION_FACTOR: 3
+      CONTROL_CENTER_INTERNAL_TOPICS_PARTITIONS: 3
+      CONTROL_CENTER_MONITORING_INTERCEPTOR_TOPIC_PARTITIONS: 3
+      CONFLUENT_METRICS_TOPIC_REPLICATION: 3
       CONFLUENT_METRICS_ENABLE: 'false'
       PORT: 9021
     networks:

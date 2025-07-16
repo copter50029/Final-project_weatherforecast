@@ -5,9 +5,7 @@ import json
 import requests
 from kafka import KafkaProducer
 import time
-API_key = 'YOUR_API_KEY' # your api key
-# lat = 13.75 # latitude # Bangkok
-# lon = 100.5167 # longitude # Bangkok
+API_key = 'TOP_sercet_api' # your api key
 bangkok_districts = {
     "Phra Nakhon": {"latitude": 13.7563, "longitude": 100.5018},
     "Dusit": {"latitude": 13.7842, "longitude": 100.5117},
